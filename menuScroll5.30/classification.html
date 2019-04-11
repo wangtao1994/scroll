@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>分类</title>
+	<style>
+	*{
+	  margin: 0;
+	  padding: 0;
+	}
+	a{
+	  text-decoration: none;
+	}
+	body{
+	  font-family: -apple-system,Helvetica,sans-serif;
+	}
+	li{
+	  list-style: none;
+	}
+	.classi-menu{
+	  position: absolute;
+	  left: 0;
+	  right: 0;
+	  top: 0;
+	  bottom: 0.98rem;
+	  display: -webkit-flex;
+	  display: flex;
+	}
+	.classi-menu .menu-left{
+	  -webkit-flex: 0 0 1.5rem;
+	  flex: 0 0 1.5rem;
+	  width: 1.5rem;
+	  height: 100%;
+	  overflow: hidden;
+	  overflow-y: auto;
+	  -webkit-overflow-scrolling: touch;
+	  background: #f5f4f9; 
+	}
+	.classi-menu  .menu-left-li{
+	  width: 100%;
+	  font-size: 0;
+	  border-bottom: 1px solid #dcdbe0;
+	}
+	.classi-menu  .menu-left-li .text{
+	  display: inline-block;
+	  vertical-align: middle;
+	  margin: 0.26rem 0 0.27rem;
+	  width: 100%;
+	  line-height: 0.4rem;
+	  text-align: center;
+	  font-size: 0.24rem;
+	  color: #333;
+	}
+	.classi-menu  .menu-left-li.on{
+	  padding-left: 0.05rem;
+	  background: #fff;
+	}
+	.classi-menu  .menu-left-li.on .text{
+	  border-left: 2px solid #f46b10;
+	  color: #ef5454;
+	}
+	.classi-menu .menu-right{
+	  -webkit-flex: 1;
+	  flex: 1;
+	  height: 100%;
+	  overflow: hidden;
+	  overflow-y: auto;
+	  -webkit-overflow-scrolling: touch;
+	  background: #fff;
+	}
+	.classi-menu .menu-right-content{
+	  display: -webkit-flex;
+	  display: flex;
+	  -webkit-flex-wrap: wrap;
+	  flex-wrap: wrap;
+	}
+	.classi-menu .content-item{
+	  display: block;
+	  padding-top: 0.3rem; 
+	  width: 33.3%;
+	}
+	.classi-menu .content-item .icon{
+	  display: block;
+	  margin: 0 auto 0.2rem;
+	  width: 1.2rem;
+	  height: 1.2rem;
+	}
+	.classi-menu .content-item .text{
+	  padding: 0 0.15rem;
+	  height: 0.53rem;
+	  line-height: 0.26rem;
+	  text-align: center;
+	  font-size: 0.24rem;
+	  color: #333;
+	}
+	.footer{
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 100;
+		height: 0.98rem;
+		line-height: 0.98rem;
+		text-align: center;
+		font-size: 0.32rem;
+		background: #f46b10;
+	}
+	</style>
+</head>
+<body>
+	<div class="classi-menu">
+		<div class="menu-left" id="menuLeft">
+			<ul class="menu-left-ul">
+				<li class="menu-left-li on">
+					<span class="text">新鲜水果</span>
+				</li>
+				<li class="menu-left-li">
+					<span class="text">绿色蔬菜</span>
+				</li>
+				<li class="menu-left-li">
+					<span class="text">美味生鲜</span>
+				</li>
+				<li class="menu-left-li">
+					<span class="text">家养鸡蛋</span>
+				</li>
+				<li class="menu-left-li">
+					<span class="text">绿色坚果</span>
+				</li>
+				<li class="menu-left-li">
+					<span class="text">绿色瓜果</span>
+				</li>
+				<li class="menu-left-li">
+					<span class="text">品行土鸡蛋</span>
+				</li>
+				<li class="menu-left-li">
+					<span class="text">美味生鲜家养鸡蛋</span>
+				</li>
+				<li class="menu-left-li">
+					<span class="text">美味生鲜</span>
+				</li>
+				<li class="menu-left-li">
+					<span class="text">美味生鲜</span>
+				</li>
+				<li class="menu-left-li">
+					<span class="text">美味生鲜家养鸡蛋</span>
+				</li>
+				<li class="menu-left-li">
+					<span class="text">绿色蔬菜</span>
+				</li>
+				<li class="menu-left-li">
+					<span class="text">美味生鲜</span>
+				</li>
+				<li class="menu-left-li">
+					<span class="text">家养鸡蛋家养鸡蛋</span>
+				</li>
+				<li class="menu-left-li">
+					<span class="text">绿色坚果</span>
+				</li>
+				<li class="menu-left-li">
+					<span class="text">绿色瓜果</span>
+				</li>
+				<li class="menu-left-li">
+					<span class="text">品行土鸡蛋</span>
+				</li>
+				<li class="menu-left-li">
+					<span class="text">美味生鲜</span>
+				</li>
+				<li class="menu-left-li">
+					<span class="text">美味生鲜</span>
+				</li>
+				<li class="menu-left-li">
+					<span class="text">美味生鲜</span>
+				</li>
+				<li class="menu-left-li">
+					<span class="text">美味生鲜</span>
+				</li>
+			</ul>
+		</div>
+
+		<div class="menu-right" id="menuRight">
+			<div class="menu-right-content">
+				<a href="javascript:;" class="content-item">
+					<img src="img/banner.png" alt="" class="icon">
+					<div class="text">分类名称</div>
+				</a>
+				<a href="javascript:;" class="content-item">
+					<img src="img/banner.png" alt="" class="icon">
+					<div class="text">分类名称分类名称分类名称</div>
+				</a>
+				<a href="javascript:;" class="content-item">
+					<img src="img/banner.png" alt="" class="icon">
+					<div class="text">分类名称分类名称分类名称</div>
+				</a>
+				<a href="javascript:;" class="content-item">
+					<img src="img/banner.png" alt="" class="icon">
+					<div class="text">分类名称分类名称分类名称</div>
+				</a>
+				<a href="javascript:;" class="content-item">
+					<img src="img/banner.png" alt="" class="icon">
+					<div class="text">分类名称</div>
+				</a>
+				<a href="javascript:;" class="content-item">
+					<img src="img/banner.png" alt="" class="icon">
+					<div class="text">分类名称</div>
+				</a>
+				<a href="javascript:;" class="content-item">
+					<img src="img/banner.png" alt="" class="icon">
+					<div class="text">分类名称</div>
+				</a>
+				<a href="javascript:;" class="content-item">
+					<img src="img/banner.png" alt="" class="icon">
+					<div class="text">分类名称分类名称分类名称</div>
+				</a>
+				<a href="javascript:;" class="content-item">
+					<img src="img/banner.png" alt="" class="icon">
+					<div class="text">分类名称</div>
+				</a>
+				<a href="javascript:;" class="content-item">
+					<img src="img/banner.png" alt="" class="icon">
+					<div class="text">分类名称</div>
+				</a>
+				<a href="javascript:;" class="content-item">
+					<img src="img/banner.png" alt="" class="icon">
+					<div class="text">分类名称</div>
+				</a>
+				<a href="javascript:;" class="content-item">
+					<img src="img/banner.png" alt="" class="icon">
+					<div class="text">分类名称分类名称分类名称</div>
+				</a>
+				<a href="javascript:;" class="content-item">
+					<img src="img/banner.png" alt="" class="icon">
+					<div class="text">分类名称</div>
+				</a>
+				<a href="javascript:;" class="content-item">
+					<img src="img/banner.png" alt="" class="icon">
+					<div class="text">分类名称</div>
+				</a>
+				<a href="javascript:;" class="content-item">
+					<img src="img/banner.png" alt="" class="icon">
+					<div class="text">分类名称</div>
+				</a>
+				<a href="javascript:;" class="content-item">
+					<img src="img/banner.png" alt="" class="icon">
+					<div class="text">分类名称分类名称分类名称</div>
+				</a>
+				<a href="javascript:;" class="content-item">
+					<img src="img/banner.png" alt="" class="icon">
+					<div class="text">分类名称</div>
+				</a>
+				<a href="javascript:;" class="content-item">
+					<img src="img/banner.png" alt="" class="icon">
+					<div class="text">分类名称</div>
+				</a>
+				<a href="javascript:;" class="content-item">
+					<img src="img/banner.png" alt="" class="icon">
+					<div class="text">分类名称</div>
+				</a>
+				<a href="javascript:;" class="content-item">
+					<img src="img/banner.png" alt="" class="icon">
+					<div class="text">分类名称分类名称分类名称</div>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">我是底部菜单</footer>
+
+	<!-- 以下为页面js部分 -->
+	<script>
+		;(function() {
+			function change() {
+				var font = document.documentElement.clientWidth / 375 * 50;
+				document.documentElement.style.fontSize = font + 'px';
+			};
+			window.addEventListener('resize', change, false);
+			change();
+		})();
+		// rem 单位换算 *不可删除
+    </script>
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script type="text/javascript">
+		$('#menuLeft .menu-left-li').click(function (e) {
+    		var i = $(this).index();
+    		var t = $('#menuLeft').scrollTop();
+    		$('#menuLeft .menu-left-li').eq(i).addClass('on').siblings().removeClass('on');
+    		$('#menuLeft').stop().animate({
+     			scrollTop: t + $('#menuLeft .menu-left-li').eq(i).offset().top - $('#menuLeft').height()/2 + $('#menuLeft .menu-left-li').height()*0.5
+    		}, 200)
+    		// 左侧按钮位置垂直居中
+    	})
+    	//左边联动
+	</script>
+</body>
+</html>
